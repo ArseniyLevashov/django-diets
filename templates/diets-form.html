@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New/Update Diet</title>
+</head>
+<body>
+
+    <h1>New/Update diet info</h1>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <h4>Name: {{ form.name }}</h4>
+        <h4>Description: {{ form.description }}</h4>
+        <h4>Start date: {{ form.start_date }}</h4>
+        <h4>Start weight: {{ form.start_weight }}</h4>
+
+        <button type="submit">Save</button>
+    </form>
+
+    {% if diet %}
+        <a href="{% url 'delete_result' result.id %}">Delete</a>
+    {% endif %}
+
+</body>
+</html>

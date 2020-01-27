@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diets</title>
+</head>
+<body>
+
+    <ul>
+        {% for diet in diets %}
+
+            <h1>{{ diet.name }}</h1>
+
+            {% for result in results %}
+                {% if result.diet_id == diet.id %}
+
+                    <h4>{{ result.current_date }}</h4>
+                    <h4>{{ result.current_weight }}</h4>
+
+                {% endif %}
+            {% endfor %}
+
+            <a href="{% url 'create_result' diet.id %}">Add Result</a>
+
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'create_diet' %}">New Diet</a>
+
+</body>
+</html>
