@@ -41,6 +41,7 @@ def update_diet(request, id):
 
     return render(request, 'diets-form.html', {'form': form, 'diet': diet})
 
+
 def update_result(request, id):
     result = Result.objects.get(id=id)
     form = ResultForm(request.POST or None, instance=result)
@@ -50,3 +51,25 @@ def update_result(request, id):
         return redirect('list_diets')
 
     return render(request, 'result-form.html', {'form': form, 'result': result})
+
+
+def delete_diet(request, id):
+    diet = Diet.objects.get(id=id)
+    results = Result.objects.filter(diet_id=id)
+
+    if request.method == 'POST':
+        results.delete()
+        diet.delete()
+        return redirect('list_diets')
+
+    return render(request, 'diet-confirm-delete.html', {'diet': diet})
+
+
+def delete_result(request, id):
+    result = Result.objects.get(id=id)
+
+    if request.method == 'POST':
+        result.delete()
+        return redirect('list_diets')
+
+    return render(request, 'result-confirm-delete.html', {'result': result})
