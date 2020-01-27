@@ -11,17 +11,12 @@
     <form method="post">
         {% csrf_token %}
 
-        <h4>Name: {{ form.name }}</h4>
-        <h4>Description: {{ form.description }}</h4>
-        <h4>Start date: {{ form.start_date }}</h4>
-        <h4>Start weight: {{ form.start_weight }}</h4>
+        {{ form }}
 
         <button type="submit">Save</button>
     </form>
 
-    {% if diet %}
-        <a href="{% url 'delete_result' result.id %}">Delete</a>
-    {% endif %}
+
 
 </body>
 </html>

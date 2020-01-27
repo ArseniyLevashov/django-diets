@@ -9,13 +9,19 @@
     <ul>
         {% for diet in diets %}
 
-            <h1>{{ diet.name }}</h1>
+            <a href="{% url 'update_diet' diet.id %}">
+                <h1>{{ diet.name }}</h1>
+            </a>
 
             {% for result in results %}
                 {% if result.diet_id == diet.id %}
 
                     <h4>{{ result.current_date }}</h4>
                     <h4>{{ result.current_weight }}</h4>
+
+                    <a href="{% url 'update_result' result.id %}">
+                        <h5>Edit Result</h5>
+                    </a>
 
                 {% endif %}
             {% endfor %}

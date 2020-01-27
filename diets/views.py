@@ -29,3 +29,24 @@ def create_result(request, id):
         return redirect('list_diets')
 
     return render(request, 'result-form.html', {'form': form})
+
+
+def update_diet(request, id):
+    diet = Diet.objects.get(id=id)
+    form = DietForm(request.POST or None, instance=diet)
+
+    if form.is_valid():
+        form.save()
+        return redirect('list_diets')
+
+    return render(request, 'diets-form.html', {'form': form, 'diet': diet})
+
+def update_result(request, id):
+    result = Result.objects.get(id=id)
+    form = ResultForm(request.POST or None, instance=result)
+
+    if form.is_valid():
+        form.save()
+        return redirect('list_diets')
+
+    return render(request, 'result-form.html', {'form': form, 'result': result})
