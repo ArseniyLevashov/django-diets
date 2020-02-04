@@ -9,7 +9,6 @@ class DietForm(forms.ModelForm):
 
 
 class ResultForm(forms.ModelForm):
-
     class Meta:
         model = Result
         fields = ['diet_id', 'current_date', 'current_weight']

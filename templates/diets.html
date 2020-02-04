@@ -13,6 +13,10 @@
                 <h1>{{ diet.name }}</h1>
             </a>
 
+            <h3>{{ diet.description }}</h3>
+            <h3>{{ diet.start_weight }}</h3>
+            <h3>{{ diet.start_date }}</h3>
+
             {% for result in results %}
                 {% if result.diet_id == diet.id %}
 

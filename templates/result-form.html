@@ -16,7 +16,7 @@
         <button type="submit">Save</button>
     </form>
 
-    {% if form %}
+    {% if result %}
         <a href="{% url 'delete_result' result.id %}">Delete Result</a>
     {% endif %}
 

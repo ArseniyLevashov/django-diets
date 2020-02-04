@@ -65,8 +65,11 @@ def delete_diet(request, id):
     return render(request, 'diet-confirm-delete.html', {'diet': diet})
 
 
-def delete_result(request, id):
+def delete_result(request, id=None):
     result = Result.objects.get(id=id)
+
+    if id is None:
+        return redirect('list_diets')
 
     if request.method == 'POST':
         result.delete()
