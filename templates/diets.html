@@ -1,22 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Diets</title>
-</head>
+    <head>
+        {% load static %}
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>{{ title }}</title>
+        
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href="{% static 'polls/main.css' %}">
+        <script src='main.js'></script>
+    </head>
 <body>
+    <header>
+        <nav>
+            <label>
+                    <input type="checkbox" id="checkbox-menu">
+                    <label for="checkbox-menu">
+                        <ul class=" menu touch">
+                            <li><a class="logo" href="">Logo</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contacts</a></li>
+                            <li><a href="#">Links & Information</a></li>
+                            <li><a href="#">Mail</a></li>
+                            <li><a href="#" class="join">Join In</a></li>
+                        </ul>
+                        <span class="toggle">^^</span>
+                    </label>
+            </label>
+        </nav>
+    </header>
+    <section class="persona">
+        <div class="command-flex">
+        <div class="photo">
+            
+        </div>
+        <div class="textos">
+            <h1>Mary Johnes</h1>
+            <h3>About me:</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Dolore unde officiis pariatur beatae dignissimos aut
+                consectetur quia. Saepe eos at maxime dolores veniam
+                nihil earum vel ratione maiores quas quo ipsa recusandae
+                ullam deserunt perspiciatis, explicabo molestiae
+                error voluptate facere ad reiciendis enim. Unde
+                aperiam dicta, deleniti omnis nesciunt corporis!</p>
+        </div>
+        </div>
+        <button>Fallow Me</button>
+        <button>Share</button>
+    </section>
+    <section class="sl">
+        <div class="add-line">
+            <div class="sim-slider">
+                <ul class="sim-slider-list">
+                    <li><img src="pic/slide-1.jpg" alt="screen"></li>    <!-- это экран -->
+                    <li class="sim-slider-element"><img src="pic/11.jpg" alt="1"></li>
+                    <li class="sim-slider-element"><img src="pic/12.jpg" alt="2"></li>
+                    <li class="sim-slider-element"><img src="pic/13.jpg" alt="N"></li>
+                </ul>
+                <div class="sim-slider-arrow-left"></div>
+                <div class="sim-slider-arrow-right"></div>
+                <div class="sim-slider-dots"></div>
+            </div>
+            <script>new Sim()</script>
+            <div class="m-1">
+            <h3>See our Project</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Repudiandae nulla repellat ullam veritatis repellendus perspiciatis
+                eius excepturi, incidunt neque quidem iste ipsa tenetur harum labore,
+                similique sequi iusto cum dicta assumenda. Possimus, laborum laboriosam
+                in explicabo eveniet dolores, magni iure, sed perferendis soluta
+                impedit qui aperiam quaerat magnam necessitatibus animi?</p>
+            </div>
+        </div>
+    </section>
+    <section class="Diet-coub">
+        <div class="cubo">
+            <div class="cub-1">
+                <img src="pic/14.jpg">
+                <h3>Diet-name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Id, cumque! Voluptatum odit est odio aspernatur quas incidunt
+                    ex amet unde!</p>
+                <button>Discription</button>
+            </div>
+            <div class="cub-1">
+                <img src="pic/15.jpg">
+                <h3>Diet-name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Id, cumque! Voluptatum odit est odio aspernatur quas incidunt
+                    ex amet unde!</p>
+                <button>Discription</button>
+            </div>
+            <div class="cub-1">
+                <img src="pic/16.jpg">
+                <h3>Diet-name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Id, cumque! Voluptatum odit est odio aspernatur quas incidunt
+                    ex amet unde!</p>
+                <button>Discription</button>
+            </div>
+        </div>
+    </section>
+    <section class="add-diet">
+        <h1>You can add, customize and delete diet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            At magni debitis, tempore fugit obcaecati perspiciatis
+            aliquid corporis eos non ad!</p>
+            <button>CREATE NEW DIET</button>
+    </section>
+    <section class="Diet-1">
+        <h2>My Diet 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+            alias architecto doloremque optio amet dolores, repellat fuga minus
+            adipisci cupiditate vero hic! Voluptates iste sequi magni itaque,
+            sunt provident sapiente ratione ipsa! Facilis illum eveniet cupiditate?
+            Magni dignissimos consequuntur totam esse eius nisi aspernatur corrupti
+            iure obcaecati aliquid eaque nesciunt possimus officiis delectus quas quis
+            dolorum mollitia perspiciatis, velit impedit!</p>
+        <table>
+            <tr class="first-line">
+                <th>Day</th>
+                <th>Date</th>
+                <th>Weight</th>
+                <th>Diferent</th>
+                <th class="note">Notes</th>
+            </tr>
+            <tr>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>   
+        </table>
+        <div class="flex-1">
+            <button>DELETE DIET</button>
+            <button>CUSTOMIZE DIET</button>
+            <button>SAVE</button>
+        </div>
+    </section>
 
-    <ul>
+
+    
+    <section class="Diet-1">
         {% for diet in diets %}
-
-            <a href="{% url 'update_diet' diet.id %}">
-                <h1>{{ diet.name }}</h1>
+        <h2><a href="{% url 'update_diet' diet.id %}">
+            {{ diet.name }}
             </a>
-
-            <h3>{{ diet.description }}</h3>
-            <h3>{{ diet.start_weight }}</h3>
-            <h3>{{ diet.start_date }}</h3>
-
+        </h2>
+        <p>{{ diet.description }}</p>
+        <table>
+            <tr class="first-line">
+                <th>Day</th>
+                <th>Date</th>
+                <th>Start Weight</th>
+                <th>Current weight</th>
+                <th class="note">Notes</th>
+            </tr>
+            <tr>
+                <td>{{ diet.start_date }}</td>
+                <td>Date</td>
+                <td>{{ diet.start_weight }}</td>
+                <td>Current weight</td>
+                <td>Diferent</td>
+            </tr>   
+        </table>
+        <!--куча олега-->
+    <ul>
             {% for result in results %}
                 {% if result.diet_id == diet.id %}
 
@@ -36,6 +187,43 @@
     </ul>
 
     <a href="{% url 'create_diet' %}">New Diet</a>
-
+    </section>
+    
+    
+    
+    
+    <footer>
+        <div class="footer-links">
+            <div class="footer-limks-logo">
+                <h4>Diet-form</h4>
+            </div>
+            <div class="footer-link">
+                <p>links-table</p>
+                <a href="">twitter</a>
+                <a href="">facebook</a>
+            </div>
+            <div class="footer-link">
+                    <p>luxestate</p>
+                    <a href="">twitter</a>
+                    <a href="">facebook</a>
+                    <a href="">github</a>
+                    <a href="">anime</a>
+                </div>
+            <div class="footer-link">
+                    <p>links-table</p>
+                    <a href="">twitter</a>
+                    <a href="">facebook</a>
+                </div>
+            <div class="footer-link">
+                    <p>links-table</p>
+                    <a href="">twitter</a>
+                    <a href="">facebook</a>
+                    <a href="">github</a>
+                </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
 </body>
 </html>
