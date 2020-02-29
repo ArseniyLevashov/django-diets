@@ -1,0 +1,384 @@
+html{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+body, html{
+    overflow-x: hidden;
+    margin: 0 auto;
+    max-width: 1620px;
+    width: 100%;
+}
+#checkbox-menu,
+.toggle{
+    display: none;
+}
+nav{
+    height: 50px;
+}
+.menu{
+    padding: 0;
+    margin: 0;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    align-items: center;
+    padding-top: 25px;
+    margin-bottom: 6px;
+}
+.menu li a{
+    text-decoration: none;
+    align-self: center;
+    font-size: 16px;
+    padding: 10px 15px;
+    color: black;
+    padding-top: 10px;
+}
+.menu li .logo{
+    margin-right: 300px;
+    font-size: 20px;
+}
+.menu li .join{
+    margin-left: 300px;
+}
+.menu select{
+    margin-right: 600px;
+    color: white;
+    border: none;
+    background-color: #ba0000;
+    padding-left: 10px;
+}
+.menu option{
+    margin-bottom: 10px;
+}
+.menu li a.contacts{
+    margin-right: 100px;
+}
+.persona{
+    background-color: black;
+    color: white;
+}
+.command-flex{
+    display: flex;
+    flex-direction: row;
+}
+.persona .photo{
+    width: 600px;
+    height: 200px;
+    border: 2px solid white;
+    margin: 80px 40px 40px 40px;
+    border-radius: 50%;
+    text-align: center;
+    background-image: url(pic/photo-1.jpg);
+    background-size: cover;
+}
+.textos{
+    margin: 50px 70px 70px 50px;
+}
+.persona button{
+    color: white;
+    background: none;
+    border: 2px solid white;
+    padding: 12px;
+    margin-right: 25px;
+    margin-top: -30px;
+    margin-bottom: 50px;
+    margin-left: 28%;
+}
+.persona button:hover{
+    background-color: rgb(86, 148, 24);
+}
+.persona button:last-child{
+    margin-left: 0%;
+}
+
+
+
+
+.sl{
+    display: flex;
+    flex-direction: row;
+}
+img {
+    width: 500px;
+  }
+  
+  .sim-slider {
+    max-width: 500px;
+    min-width: 500px;
+    padding: 10px;
+    border: 1px solid #ccd;
+    background-color: white;
+  }
+  
+  /* General styles */
+  .sim-slider {
+    position: relative;
+  }
+  
+  .sim-slider-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+  }
+  
+  .sim-slider-element {
+    width: 100%;
+    transition: opacity 1s ease-in;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    display: block;
+  }
+  
+  /* Navigation item styles */
+  div.sim-slider-arrow-left,
+  div.sim-slider-arrow-right {
+    width: 22px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.6;
+    z-index: 4;
+    color: rgb(86, 148, 24);
+  }
+  
+  div.sim-slider-arrow-left {
+    left: 10px;
+    top: 40%;
+    display: block;
+    background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-left.png") no-repeat;
+  }
+  
+  div.sim-slider-arrow-right {
+    right: 10px;
+    top: 40%;
+    display: block;
+    background: url("http://pvbk.spb.ru/inc/slider/sim-files/sim-arrow-right.png") no-repeat;
+  }
+  
+  div.sim-slider-arrow-left:hover {
+    opacity: 1.0;
+  }
+  
+  div.sim-slider-arrow-right:hover {
+    opacity: 1.0;
+  }
+  
+  div.sim-slider-dots {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    text-align: center;
+  }
+  
+  span.sim-dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    padding: 0;
+    display: inline-block;
+    background-color: #BBB;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .line-img img{
+    width: 541px;
+    height: 330px;
+}
+
+.add{
+    padding-bottom: 100px;
+    padding-top: 90px;
+}
+
+.add-line{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.add-line h3{
+    font-size: 25px;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: 15%;
+    margin-right: 10%;
+}
+.add-line h3:last-of-type{
+    margin-top: 25px;
+}
+
+.add-line p{
+    font-size: 13px;
+    line-height: 30px;
+    margin-left: 15%;
+    margin-right: 10%;
+}
+
+.add-line-right p{
+    margin-left: 0;
+    margin-right: 200px;
+}
+.Diet-coub{
+    background-color: rgba(126, 252, 0, 0.356);
+}
+.cubo{
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+}
+.cub-1{
+    width: 250px;
+    height: 370px;
+    margin: 50px;
+    background-color: white;
+    box-shadow: 0 0 15px gray;
+}
+.cub-1 img{
+    width: 250px;
+    height: 150px;
+}
+.cub-1 h3{
+    text-align: center;
+}
+.cub-1 p{
+    margin: 15px;
+}
+.cub-1 button{
+    background: none;
+    border: 2px solid black;
+    padding: 5px 10px 5px 10px;
+    margin-left: 15px;
+}
+.cub-1 button:hover{
+    background-color: rgb(86, 148, 24);
+    color: white;
+}
+
+
+.add-diet button{
+    margin: auto;
+    background: none;
+    border: 2px solid black;
+    padding: 5px 10px 5px 10px;
+    margin-left: 44%;
+}
+.add-diet button:hover{
+    background-color: rgb(86, 148, 24);
+    color: white;
+}
+.add-diet h1{
+    text-align: center;
+}
+.add-diet p{
+    text-align: center;
+}
+.Diet-1 h2{
+    text-align: center;
+}
+.Diet-1 p{
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+.Diet-1 button{
+    margin: auto;
+    background: none;
+    border: 2px solid black;
+    padding: 5px 10px 5px 10px;
+}
+.Diet-1 button:hover{
+    background-color: rgb(86, 148, 24);
+    color: white;
+}
+.flex-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 50px;
+}
+table{
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.save-b{
+    margin: auto;
+    background: none;
+    border: 2px solid black;
+    padding: 5px 10px 5px 10px;
+}
+.save-b:hover{
+    background-color: rgb(86, 148, 24);
+    color: white;
+}
+.oga{
+    color: #ba0000;
+}
+td{
+    border: 1px solid black;
+}
+.note{
+    width: 350px;
+}
+tr th{
+    width: 90px;
+}
+.first-line{
+    background-color: rgba(126, 252, 0, 0.356);
+}
+footer{
+    background: black;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+footer h4{
+    margin-left: 40px;
+    color: white;
+}
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 90px;
+}
+
+.footer-link{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-link p{
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #919eb1;
+    margin-bottom: 35px;
+}
+
+.footer-links-logo{
+    font-size: 25px;
+    margin-right: 26%;
+}
+
+.footer-link a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.footer-link a:hover{
+    opacity: 0.6;
+}
