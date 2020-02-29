@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Confirm delete</title>
-</head>
+    <head>
+        {% load static %}
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Confirm delete</title>
+        
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href="{% static 'polls/Confirm.css' %}">
+        <script src='main.js'></script>
+    </head>
+<body>
 <body>
 
 <form method="post">
 
     {% csrf_token %}
 
-    <h2>Delete {{ result.current_date }} result?</h2>
+    <h2 class="oga">Delete {{ result.current_date }} result?</h2>
 
     <button type="submit">Sure</button>
 
